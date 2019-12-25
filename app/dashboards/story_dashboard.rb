@@ -10,7 +10,7 @@ class StoryDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     title: Field::String,
-    description: Field::Text,
+    description: Field::Trix,
     claps: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,

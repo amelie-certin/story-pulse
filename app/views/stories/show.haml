@@ -4,4 +4,4 @@
   = @story.claps
 = link_to '+1', @story, method: :put, remote: true
 
-%p= @story.description
+%p= @story.description.html_safe
