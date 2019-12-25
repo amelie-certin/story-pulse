@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       root to: "stories#index"
     end
 
-  resources :stories, only: %i[show index]
+  resources :stories, only: %i[show update index]
 
   root 'stories#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

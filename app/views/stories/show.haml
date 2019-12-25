@@ -1,4 +1,7 @@
 %h1= @story.title
 
-%p= @story.claps
+%p#claps-count
+  = @story.claps
+= link_to '+1', @story, method: :put, remote: true
+
 %p= @story.description
