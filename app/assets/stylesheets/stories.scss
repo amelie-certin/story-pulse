@@ -5,15 +5,16 @@
 .claps-container {
   @media screen and (max-width: 720px) {
     flex-direction: column;
+    align-items: center;
   }
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: baseline;
 
 
   a {
-
+    margin-bottom: 40px;
     font-size: 36px;
     margin-left: 24px;
     outline: none;
@@ -28,7 +29,7 @@
     }
 
     .fa-thumbs-up {
-      transition: 0.3s;
+      transition: 0.4s;
       font-size: 54px;
     }
 
