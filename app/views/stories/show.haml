@@ -2,6 +2,8 @@
 
 %p#claps-count
   = @story.claps
-= link_to '+1', @story, method: :put, remote: true
+= link_to @story, method: :put, remote: true do
+  = fa_icon 'thumbs-up'
+  +1
 
 %p= @story.description.html_safe
