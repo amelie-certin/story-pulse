@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_26_120517) do
+ActiveRecord::Schema.define(version: 2019_12_26_195035) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_12_26_120517) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "rank"
     t.index "\"reset_password_token\"", name: "index_admin_users_on_reset_password_token", unique: true
     t.index ["email"], name: "index_admin_users_on_email", unique: true
   end
@@ -28,6 +29,9 @@ ActiveRecord::Schema.define(version: 2019_12_26_120517) do
     t.integer "claps"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "admin_user_id"
+    t.index ["admin_user_id"], name: "index_stories_on_admin_user_id"
   end
 
+  add_foreign_key "stories", "admin_users"
 end

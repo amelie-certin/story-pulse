@@ -2,7 +2,7 @@
 
 .claps-container
   %p#claps-count
-    = @story.claps
+    = number_with_delimiter @story.claps
   = link_to @story, method: :put, remote: true do
     = fa_icon 'thumbs-up'
     +1

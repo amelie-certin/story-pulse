@@ -1,1 +1,1 @@
-document.getElementById('claps-count').innerHTML = #{@story.claps};
+document.getElementById('claps-count').innerHTML = '#{number_with_delimiter(@story.claps)}';
