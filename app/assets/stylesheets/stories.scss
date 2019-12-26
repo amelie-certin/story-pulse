@@ -1,3 +1,31 @@
 // Place all the styles related to the Stories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.claps-container {
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  a {
+    @media screen and (max-width: 720px) {
+      margin-left: 0;
+    }
+
+    font-size: 36px;
+    margin-left: 24px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+#claps-count {
+  font-size: 70px;
+}
