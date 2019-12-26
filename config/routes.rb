@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :admin_users
   namespace :admin do
       resources :stories
+      resources :admin_users
 
       root to: "stories#index"
     end
