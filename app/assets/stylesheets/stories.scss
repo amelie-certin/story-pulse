@@ -13,15 +13,33 @@
 
 
   a {
-    @media screen and (max-width: 720px) {
-      margin-left: 0;
-    }
 
     font-size: 36px;
     margin-left: 24px;
+    outline: none;
+    color: #0056b3;
 
     &:hover {
       text-decoration: none;
+
+      .fa-thumbs-up {
+        transform: rotate(-25deg);
+      }
+    }
+
+    .fa-thumbs-up {
+      transition: 0.3s;
+      font-size: 54px;
+    }
+
+    &:active {
+      .fa-thumbs-up {
+        transform: rotate(0deg);
+      }
+    }
+
+    @media screen and (max-width: 720px) {
+      margin-left: 0;
     }
   }
 }
