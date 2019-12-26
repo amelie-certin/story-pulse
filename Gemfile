@@ -30,6 +30,7 @@ gem "haml"
 gem 'trix-rails', require: 'trix'
 gem 'administrate-field-trix'
 gem 'font-awesome-rails'
+gem 'devise'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
